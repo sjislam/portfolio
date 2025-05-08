@@ -3,9 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shahajalal's Portfolio Website</title>
+    <title>Shahajalal Islam - Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <h1>Work in Progress</h1>
+    <main>
+        <div class="profile-pic">
+            <img src="pic.jpg" alt="Shahajalal Islam Profile Picture">
+        </div>
+        
+        <h1>Hi, I'm Shahajalal Islam</h1>
+        <p>
+            Welcome to my personal website! I study Computer Science at the University of Washington.
+            Feel free to explore and learn more about me and my work. I'm always open to connecting.
+        </p>
+        
+        <div class="modal-buttons">
+            <button class="modal-btn" onclick="openModal('about')">About Me</button>
+            <button class="modal-btn" onclick="openModal('projects')">Projects</button>
+            <button class="modal-btn" onclick="openModal('experience')">Experience</button>
+            <button class="modal-btn" onclick="openModal('contact')">Contact Me</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Shahajalal Islam · All rights reserved</p>
+    </footer>
+
+    <div id="about-modal" class="modal-backdrop">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>About Me</h2>
+                <button class="close-btn" onclick="closeModal('about')">&times;</button>
+            </div>
+            <div class="modal-content">
+                <p>
+                    As a Computer Science student at the University of Washington's Paul G. Allen School of Computer
+                    Science & Engineering, I'm driven by a passion for technology and a desire to make a positive impact.
+                </p>
+                <p>
+                    I had the opportunity to work at Microsoft through the Discovery Program, where I explored areas such as
+                    software development, project management, and user interface/experience design. This experience helped me
+                    strengthen both my technical abilities and interpersonal skills.
+                </p>
+                <p>
+                    I bring a strong work ethic, critical thinking, and a collaborative mindset to every project. I thrive in both
+                    team settings and independent work, always aiming for high-quality outcomes. With a commitment to continuous
+                    learning and innovation, I'm eager to grow and take on new challenges.
+                </p>
+                <h3>Education</h3>
+                <ul>
+                    <li>Bachelor of Computer Science, University of Washington (Aug 2024 - Expected Jun 2028)</li>
+                    <li>Associate of Science, Highline College (Sep 2022 - Jun 2024)</li>
+                </ul>
+                <h3>Skills</h3>
+                <div class="skills-container">
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Figma</span>
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="resume.pdf" class="resume-btn" target="_blank">
+                        <i class="fas fa-file-pdf"></i> View Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="projects-modal" class="modal-backdrop">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>My Projects</h2>
+                <button class="close-btn" onclick="closeModal('projects')">&times;</button>
+            </div>
+            <div class="modal-content">
+                <!-- <div class="project-card">
+                    <h3>Personal Portfolio Website</h3>
+                    <p>
+                        Built with HTML, CSS, and JavaScript. The site features links to other projects, a "Contact Me"
+                        section, resume download button, and clickable social media icons. All hosted on GitHub Pages.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div> -->
+                <div class="project-card">
+                    <h3>Watch/Clock</h3>
+                    <p>
+                        Built a functional physical watch using Circuit Playground and JavaScript in a hackathon,
+                        with the watch displayed on a computer screen, gaining experience in sensors, physical computing,
+                        and hardware-software integration.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Circuit Playground</span>
+                    </div>
+                    <!-- <a href="#" class="project-link">View Project →</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="experience-modal" class="modal-backdrop">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>My Experience</h2>
+                <button class="close-btn" onclick="closeModal('experience')">&times;</button>
+            </div>
+            <div class="modal-content">
+                <div class="experience-item">
+                    <h3>Digital Marketing & Technical Assistant</h3>
+                    <p class="position">Mutual Auto & Tire Services • Seattle, WA • Jun 2023 - Present</p>
+                    <ul class="job-description">
+                        <li>Developed a website, increasing online presence and boosting sales by 15%.</li>
+                        <li>Managed social media/maps advertising to boost engagement and brand engagement by 20%.</li>
+                        <li>Designed marketing materials such as flyers, business cards, and banners, enhancing brand visibility by 35%.</li>
+                        <li>Resolved software issues and implemented digital solutions: sign-in sheets and invoicing for increased efficiency.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>Discovery Intern</h3>
+                    <p class="position">Microsoft • Redmond, WA • Jul 2024 - Aug 2024</p>
+                    <ul class="job-description">
+                        <li>Collaborated with a team of 5 to explore trust in AI, integrating feedback and ideas from multiple perspectives.</li>
+                        <li>Created and presented an interactive Figma prototype to 150+ attendees, including interns, stakeholders, VPs.</li>
+                        <li>Learned to seek and apply constructive feedback, networked with 25+ professionals for career advice and insights.</li>
+                        <li>Reinforced passion for technology, clarified career goals, and enjoyed a memorable learning journey.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>Leadership & Extracurricular Activities</h3>
+                    <p class="position">Various Organizations • Seattle, WA • Ongoing</p>
+                    <ul class="job-description">
+                        <li>GEN1 Member - UW / Paul G. Allen School of CSE Community for First-Generation College Students.</li>
+                        <li>Washington State Opportunity Scholarship Recipient - Career Prep & Academic Support.</li>
+                        <li>Cultural & Religious Youth Leader - Actively engaged in South Seattle's Bengali community and local Islamic centers, organizing cultural events, leading youth activities, and volunteering.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact-modal" class="modal-backdrop">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Contact Me</h2>
+                <button class="close-btn" onclick="closeModal('contact')">&times;</button>
+            </div>
+            <div class="modal-content">
+                <p>
+                    I'm always open to new opportunities, collaborations, or just a friendly chat.
+                    Feel free to reach out by filling out the form below or through any of the provided links.
+                </p>
+                
+                <div class="social-links">
+                    <a href="mailto:sjislam27@gmail.com" class="social-link">
+                        <i class="fas fa-envelope social-icon"></i>
+                        <span>Email</span>
+                    </a>
+                    
+                    <a href="https://linkedin.com/in/sjislam/" class="social-link" target="_blank">
+                        <i class="fab fa-linkedin social-icon"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    
+                    <a href="https://github.com/sjislam" class="social-link" target="_blank">
+                        <i class="fab fa-github social-icon"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send me a message</h3>
+                    <form id="contact-form" action="https://formsubmit.co/sjislam27@gmail.com" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <input type="hidden" name="_subject" value="New message from your website!">
+                        <input type="hidden" name="_next" value="thanks.html">
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
